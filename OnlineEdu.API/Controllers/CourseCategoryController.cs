@@ -41,8 +41,8 @@ namespace OnlineEdu.API.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            var value = _CourseCategoryService.TGetById(id);
-            return Ok(value);
+            _CourseCategoryService.TDelete(id);
+            return Ok("Başarılı bir şekilde Kurs Kategorisi Silindi.");
         }
 
     }
